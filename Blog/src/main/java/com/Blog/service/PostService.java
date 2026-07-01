@@ -1,12 +1,14 @@
 package com.Blog.service;
 
-import com.Blog.config.ModelMapperConfig;
 import com.Blog.dto.PostDto;
 import com.Blog.entity.Post;
 import com.Blog.exception.PostNotFound;
 import com.Blog.repository.PostRepository;
 import com.Blog.specification.PostSpecification;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -44,8 +46,10 @@ public class PostService {
 
     }
 
-    public List<Post> getAllPost(int page, int size){
-        return repository.findAll();
+    public Page<PostDto> getAllPost(int page, int size){
+        Pageable pageable= PageRequest.of(page,size);
+        Page<Post> posts=repository.findAll(pageable);
+        return posts.map(post->modelMapper.map(post,PostDto.class));
     }
 
     public Post getByTitlePost(String title){

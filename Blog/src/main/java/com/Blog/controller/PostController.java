@@ -3,6 +3,7 @@ package com.Blog.controller;
 import com.Blog.dto.PostDto;
 import com.Blog.entity.Post;
 import com.Blog.service.PostService;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,8 +19,8 @@ public class PostController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Post>> getAll(@RequestParam(defaultValue = "0") int page ,
-                                             @RequestParam(defaultValue = "10") int size){
+    public ResponseEntity<Page<PostDto>> getAll(@RequestParam(defaultValue = "0") int page ,
+                                       @RequestParam(defaultValue = "10") int size){
         return ResponseEntity.ok(service.getAllPost(page,size));
     }
 
