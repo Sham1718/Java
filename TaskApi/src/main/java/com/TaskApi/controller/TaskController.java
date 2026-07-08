@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173/")
 @RestController
 @RequestMapping("/task")
 public class TaskController {
@@ -19,12 +20,12 @@ public class TaskController {
         this.service = service;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/")
     public ResponseEntity<List<Task>> allTask(){
         return ResponseEntity.ok(service.showAllTask());
     }
 
-    @PostMapping("/create")
+    @PostMapping("/")
     public ResponseEntity<Task> createTask(
             @RequestBody TaskDto dto
             ){
@@ -45,7 +46,7 @@ public class TaskController {
         return ResponseEntity.ok(service.getBYTitle(title));
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> delete(
             @PathVariable long id
     ){
@@ -53,7 +54,7 @@ public class TaskController {
         return ResponseEntity.ok("Deleted..!");
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Task> update(
             @PathVariable long id,
             @RequestBody TaskDto dto
