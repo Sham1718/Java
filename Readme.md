@@ -190,7 +190,7 @@ Through these projects, I gained practical experience in:
 
 ---
 
-# 🚀 How to Run
+#  How to Run
 
 ## Backend Projects
 
