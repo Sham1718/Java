@@ -110,7 +110,7 @@ Frontend applications developed using React and Vite that communicate with the S
 
 ---
 
-# 🛠 Tech Stack
+#  Tech Stack
 
 ## Languages
 
