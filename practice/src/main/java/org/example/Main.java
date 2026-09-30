@@ -1,22 +1,27 @@
 package org.example;
 
-
-
 import java.util.*;
 
-public class Main
-{
-    public static void firstOcc(int []arr) {
-        Set<Integer> occ=new HashSet<>();
-        for (int j:arr){
-            if(!occ.add(j)){
-                System.out.println(j);
-                break;
+public class Main {
+
+    public static void sortString(String []s) {
+        for (int i = 0; i < s.length; i++) {
+            int min=i;
+            for (int j = i; j < s.length; j++) {
+                if (s[j].charAt(0)<s[min].charAt(0)){
+                    min=j;
+                }
             }
+            String temp =s[i];
+            s[i]=s[min];
+            s[min]=temp;
         }
+        System.out.println(Arrays.toString(s));
+
+
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,6,4,7,6,9,8,9,7,1};
-       firstOcc(arr);
+       String[] s= {"shyam","abhay","yash","mahesh","tejaswini"};
+       sortString(s);
     }
 }
