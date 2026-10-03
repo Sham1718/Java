@@ -17,8 +17,6 @@ public class Main {
             s[min]=temp;
         }
         System.out.println(Arrays.toString(s));
-
-
     }
     public static void main(String[] args) {
        String[] s= {"shyam","abhay","yash","mahesh","tejaswini"};
