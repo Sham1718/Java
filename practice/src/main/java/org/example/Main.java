@@ -19,7 +19,7 @@ public class Main {
         System.out.println(Arrays.toString(s));
     }
     public static void main(String[] args) {
-       String[] s= {"shyam","abhay","yash","mahesh","tejaswini"};
+       String[] s= {"shyam","abhay","mahesh","tejaswini"};
        sortString(s);
     }
 }
