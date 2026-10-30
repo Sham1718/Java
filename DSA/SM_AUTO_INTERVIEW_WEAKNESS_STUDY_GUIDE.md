@@ -2252,6 +2252,22 @@ describe("Dashboard states", () => {
 
 Run tests: `npx vitest run` (**5 passed**: success, partial, empty, 503 error, stale response ignored).
 
+## The useEffect runs when customerId or reloadKey changes:
+
+Create an AbortController. Its signal lets you cancel the request.
+Start a 5 second timer that aborts the request with a TimeoutError (frontend timeout).
+Set status to loading but keep the old data (...s), so the screen doesn’t flash blank.
+Call the API, then decide the status:
+no keys in body.data → empty
+body.partial is true → partial (the back  end says some service failed)
+otherwise → success
+In .catch:
+If the abort came from cleanup (user changed the id or left the page), it is AbortError, so ignore it. That is not a real error.
+If it was our timeout, show “took too long”.
+Otherwise map status codes: 503 → “All data sources unavailable”, 422 → “Invalid customer id”, else a generic message.
+.finally clears the timer.
+The returned cleanup function runs before the next effect and on unmount. It aborts the in-flight request. This prevents a race condition: you load customer 1 (slow), switch to customer 2 (fast), then the slow response for 1 arrives and overwrites customer 2’s data. Aborting makes that impossible.
+
 ## 5.5 Walkthrough of the important parts
 
 **`useDashboard` step by step**
