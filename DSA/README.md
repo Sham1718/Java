@@ -267,28 +267,28 @@ Small upgrades only - your implementations of these are assumed working:
 
 Mark a phase **In Progress** when you start, **Completed** when every problem in it has been solved *and* re-solved once from memory.
 
-| Phase | Topic | Status | Problems |
-|---|---|---|---|
+| Phase | Topic | Status        | Problems |
+|---|---|---------------|---|
 | 0 | Baseline (your 37 problems) | **Completed** | 37/37 |
-| 1 | Arrays + Hashing | Not Started | 0/23 |
-| 2 | Sliding Window | Not Started | 0/20 |
-| 3 | Two Pointers | Not Started | 0/18 |
-| M1 | Mock Interview 1 | Not Started | 0/5 |
-| 4 | Advanced Binary Search | Not Started | 0/23 |
-| 5 | Recursion + Backtracking | Not Started | 0/22 |
-| 6 | Linked List | Not Started | 0/21 |
-| M2 | Mock Interview 2 | Not Started | 0/5 |
-| 7 | Advanced Stack + Queue | Not Started | 0/21 |
-| 8 | Heap / Priority Queue | Not Started | 0/18 |
-| 9 | Binary Tree | Not Started | 0/27 |
-| M3 | Mock Interview 3 | Not Started | 0/5 |
-| 10 | Binary Search Tree | Not Started | 0/17 |
-| 11 | Graph | Not Started | 0/27 |
-| 12 | Trie | Not Started | 0/15 |
-| M4 | Mock Interview 4 | Not Started | 0/5 |
-| 13 | Dynamic Programming | Not Started | 0/29 |
-| FM | Final Mock Interview | Not Started | 0/5 |
-| | **TOTAL** | | **0/306** |
+| 1 | Arrays + Hashing | IN PROGRESS   | 0/23 |
+| 2 | Sliding Window | Not Started   | 0/20 |
+| 3 | Two Pointers | Not Started   | 0/18 |
+| M1 | Mock Interview 1 | Not Started   | 0/5 |
+| 4 | Advanced Binary Search | Not Started   | 0/23 |
+| 5 | Recursion + Backtracking | Not Started   | 0/22 |
+| 6 | Linked List | Not Started   | 0/21 |
+| M2 | Mock Interview 2 | Not Started   | 0/5 |
+| 7 | Advanced Stack + Queue | Not Started   | 0/21 |
+| 8 | Heap / Priority Queue | Not Started   | 0/18 |
+| 9 | Binary Tree | Not Started   | 0/27 |
+| M3 | Mock Interview 3 | Not Started   | 0/5 |
+| 10 | Binary Search Tree | Not Started   | 0/17 |
+| 11 | Graph | Not Started   | 0/27 |
+| 12 | Trie | Not Started   | 0/15 |
+| M4 | Mock Interview 4 | Not Started   | 0/5 |
+| 13 | Dynamic Programming | Not Started   | 0/29 |
+| FM | Final Mock Interview | Not Started   | 0/5 |
+| | **TOTAL** |               | **0/306** |
 
 **Numbering rule:** problems are numbered globally from `001` to `306` and never restart. Every problem card shows `Problem NNN - Title` plus `Category`, `Difficulty`, and `Pattern`.
 
