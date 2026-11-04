@@ -603,9 +603,9 @@ START: read problem, restate it, confirm input/output & constraints
 
 ### 7.1 Growth Rates (Big-O)
 
-| Complexity | Name | Example problem | n = 10¶ feasible |
+| Complexity | Name | Example problem |Max safe input size of n|
 |---|---|---|---|
-| O(1) | Constant | HashMap `get`, array index, stack `push/pop` | Yes |
+| O(1) | Constant | HashMap `get`, array index, stack `push/pop` | Yes any size 10^18  |
 | O(log n) | Logarithmic | Binary search, heap `sift`, balanced BST op | Yes (‰ˆ20 steps) |
 | O(n) | Linear | Single pass, two pointers, sliding window, BFS/DFS | Yes |
 | O(n log n) | Linearithmic | Sorting, heap-sorting n items, "sort then scan" | Yes (‰ˆ2·10· ops) |
