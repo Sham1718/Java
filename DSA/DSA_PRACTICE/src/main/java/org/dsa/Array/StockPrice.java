@@ -1,5 +1,5 @@
 package org.dsa.Array;
-// optimised and solution
+// optimized and solution
 public class StockPrice {
     public static int profit(int[] arr){
        int minPrice=arr[0];
