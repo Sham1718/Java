@@ -30,7 +30,7 @@ public class RearrangePosNeg {
     };
 
     public static void main(String[] args){
-        int[] arr={1,5,-6,-2,8,-4};
+        int[] arr={1,5,-6,-2,8,9,4};
         System.out.println(Arrays.toString(rearrange(arr)));
     }
 }
