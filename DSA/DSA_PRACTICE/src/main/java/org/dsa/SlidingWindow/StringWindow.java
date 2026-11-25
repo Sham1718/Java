@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class StringWindow {
 
-    public static int duplicateChar(String s) {
+    public static int longestSubString(String s) {
         int left = 0;
         int maxLength = 0;
 
@@ -25,6 +25,6 @@ public class StringWindow {
     }
     public static void main(String[] args){
         String s= "abba";
-        System.out.println(duplicateChar(s));
+        System.out.println(longestSubString(s));
     }
 }
